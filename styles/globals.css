@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Yekan;
+  src: url('../public/fonts/Yekan.eot');
+  src: url('../public/fonts/Yekan.ttf');
+  src: url('../public/fonts/Yekan.woff');
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +24,64 @@ a {
 
 * {
   box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font: 62.5% Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+  background-image: url('/img/dave-webb-unsplash.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.3em;
+  font-weight: normal;
+}
+
+.note {
+  width: 16em;
+  min-height: 14em;
+  background: #f8de59;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.5));
+}
+.note:before {
+  content: "";
+  position: absolute;
+  right: 2em;
+  bottom: -2em;
+  left: 0;
+  border: 1em solid #f8de59;
+  z-index: -1;
+}
+.note:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2em;
+  border-width: 2em 2em 0 0;
+  border-style: solid;
+  border-color: #d69722 transparent;
+  filter: drop-shadow(-4px 5px 9px rgba(0, 0, 0, 0.5));
+}
+
+textarea {
+  font: italic 1.2em Georgia, Yekan;
+  background: transparent;
+  width: 8.4em;
+  height: 5.8em;
+  margin: 20% 0.8em 0 0.8em;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  letter-spacing: -1px;
+  outline-style: none;
+  resize: none;
 }
